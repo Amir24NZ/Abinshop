@@ -78,10 +78,15 @@ body {
     z-index: 1000;
     border-radius: 15px;
     width: 200px;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 .main-nav.active {
     display: flex;
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .main-nav a {
@@ -315,7 +320,7 @@ body {
 }
 
 .product-description.show {
-    max-height: 100px;
+    max-height: 1000px; /* اصلاح شده برای نمایش کامل متن */
 }
 
 

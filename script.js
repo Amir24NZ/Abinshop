@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             productsInThisCategory.forEach(card => {
                 const title = card.querySelector('h3').textContent.toLowerCase();
-                if (title.includes(searchTerm)) {
+                const description = card.querySelector('.product-description')?.textContent.toLowerCase() || ''; 
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
                     card.classList.remove('hidden');
                     hasResultsInThisCategory = true;
                     totalResultsFound = true;
